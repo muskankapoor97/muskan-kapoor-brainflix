@@ -1,0 +1,137 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.videoComments__form-heading,.comment__content{
+    margin: 0;
+}
+.videoComments{
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    &__total{
+        font-family: Avenir-demi;
+    }
+    &__user{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    &__user-image{
+        background:url(../../assets/images/Mohan-muruge.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        width: 2.8rem;
+        max-height: 2.8rem;
+        object-fit: contain;
+    }
+    &__form{
+        width: 82%;
+
+        &-heading{
+            color: $secondary-text-color;
+           
+        }
+        &-input
+        {
+            width: 100%;
+            border-radius: 0.25rem;
+            padding: 12px;
+            border: 1px solid $divider-color;
+            background-color: $secondary-background-color;
+            height: 8.5rem;
+        }
+        &-button{
+            width: 100%;
+            height: 3.1rem;
+            background-color: $primary-cta-color;
+            color:$primary-background-color;
+            border-radius: 0.25rem;
+            border: none;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+
+
+        }
+
+    }
+    .videoComments__form-button::before{
+        content: url("../../assets/icons/add_comment.svg");
+        display: block;
+        float: left;
+        position: relative;
+        top: 5%;
+    }
+
+    .comment{
+        width: 82%;
+        font-size: 1rem;
+        &__container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__image-container{
+            background-color:$divider-color ;
+            border-radius: 50%;
+            width: 2.8rem;
+            max-height: 2.8rem;
+            margin-top: 1rem;
+    
+        }
+        &__heading{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__content{
+            padding-bottom: 1rem;
+        }
+        &__date{
+            color: $secondary-text-color;
+        }
+    }
+
+    @include breakpoint.medium{
+        .videoComments{
+            padding: 0 2.25rem;
+            &__total{
+                font-family: Avenir-bold;
+            }
+            &__form-inputWrapper{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__form-button{
+                width: 44%;
+                height: 2.6rem;
+                margin: 0;
+            }
+            &__form-input{
+                height: 2.6rem;
+                margin-right: 4%;
+            }
+            &__user-image{
+                margin-top: 1rem;
+            }
+            &__form{
+                width:90%;
+            }
+            &__form-heading{
+                font-family: Avenir-demi;
+            }
+    }
+    .comment{
+        width: 90%;
+    }
+}
+@include breakpoint.large{
+    .videoComments{
+        padding: 0;
+    }
+    .comment{
+       padding: 0 2.25rem;
+    }
+
+}

@@ -1,0 +1,77 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.description__heading,.description__channel,.description__date,hr,.description__views-number,.description__likes-number{
+    margin:0;
+}
+.description{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    
+
+    &__heading{
+        font-family: Avenir-demi;
+        font-size: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    &__info{
+        display: flex;
+        line-height: 2.5rem;
+        color: $secondary-text-color;
+        &-containers{
+            width: 50%;
+            padding: 1rem 0;
+        }
+    }
+    &__channel{
+        font-family: Avenir-demi;
+        color: $primary-text-color;
+    }
+    &__paragraph{
+        line-height: 1.5rem;
+    }
+    &__views-icon{
+        width: 1.6rem;
+        margin-right: 0.6rem;
+    }
+    &__likes-icon{
+        width: 1.4rem;
+        margin-right: 0.6rem;
+    }
+
+}
+@include breakpoint.medium{
+    .description{
+        padding:0 2.25rem;
+        &__heading{
+            font-family: Avenir-bold;
+        }
+        &__info{
+            display: flex;
+            justify-content: space-between;
+            &-containers{
+                display: flex;
+                justify-content: space-between;
+                width: 35%;}
+                
+            }
+        &__channel{
+            font-family: Avenir-bold;
+        }
+    }
+}
+    .hr--mobile{
+        display: none;
+    }
+
+    @include breakpoint.large{
+        .description{
+            padding: 0;
+        }
+        .description__info,.description__paragraph{
+           padding: 0 2.25rem;
+        }
+    
+    }

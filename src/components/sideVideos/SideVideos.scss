@@ -1,0 +1,51 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+.sidevideos__heading,.sidevideo__content-title,.sidevideo__content-channel{
+    margin: 0;
+}
+.sidevideos{
+    border-top: 1px solid $divider-color;
+    padding: 0 1rem;
+    &__heading{
+        color: $secondary-text-color;
+        font-size: 0.95rem;
+        padding-top: 1.5rem;
+        
+    }
+    &__container{
+        display: flex;
+        padding-top: 1rem;
+        
+    }
+    
+}
+.sidevideo__image{
+    min-width: 8.92rem;
+    height: 4.8rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    
+}
+.sidevideo__content-title{
+        
+    font-family: Avenir-demi;
+}
+@include breakpoint.medium{
+    .sidevideos__wrapper{
+        width: 50%;
+    }
+    .sidevideo__content-title{
+        margin-bottom: 1rem;
+    }
+}
+@include breakpoint.large{
+    .sidevideos{
+        border-top: none;
+        border-left: 1px solid $divider-color;
+    &__wrapper{
+        width: 90%;
+    }
+}
+}

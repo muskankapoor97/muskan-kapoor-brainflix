@@ -1,0 +1,124 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.header{
+    padding:0 1rem;
+}
+.navbar{
+    &__input-container{
+        width: 83%;
+    }
+    &__logo{
+        display: block;
+        margin:1rem auto;
+        width: 9.5rem;
+        
+    }
+    &__input{
+        width: 100%;
+        height:3rem;
+        border:2px solid $divider-color;
+        border-radius: 0.4rem;
+        position: relative;
+        
+    }
+    
+    
+    
+    
+    &__input-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image--mobile{
+        background:url(../../assets/images/Mohan-muruge.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        width: 3rem;
+        max-height: 3rem;
+        object-fit: contain;
+        
+    }
+    &__button{
+        width: 100%;
+        height: 3.1rem;
+        background-color: $primary-cta-color;
+        color:$primary-background-color;
+        border-radius: 0.25rem;
+        border: none;
+        font-size: 1rem;
+        position: relative;
+        
+
+    }
+    &__button::before{
+        content: url("../../assets/icons/upload.svg");
+        display: block;
+        float: left;
+        position: relative;
+        top: 5%;
+    }
+    &__button-container{
+        padding: 1rem 0;
+    }
+    
+}
+.navbar__input::before{
+    content: url("../../assets/icons/search.svg");
+    display: inline;
+    float: left;
+    position: relative;
+    top: 5%;
+}
+
+@include breakpoint.medium{
+    .header{
+        padding: 0 2.25rem;
+    }
+    .navbar{
+        &__container{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__logo{
+            margin: 0;
+            width: 7.5rem;
+        }
+        &__rightContainer{
+            display: flex;
+            justify-content: space-between;
+            width:66%;
+        }
+        &__image--mobile{
+            display: none;
+        }
+        &__image--tablet{
+            background:url(../../assets/images/Mohan-muruge.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            width: 3rem;
+            max-height: 3rem;
+            object-fit: contain;
+            margin:1rem 0;
+        }
+        &__button-container{
+            width: 35%;
+        }
+        &__input-container{
+            padding:1rem 0;
+            width: 100%;
+
+        }
+        &__input-wrapper{
+            width: 50%;
+        }
+    }
+}
+
+@include breakpoint.large{
+    .header{
+        padding:0 6rem;
+    }
+
+}
