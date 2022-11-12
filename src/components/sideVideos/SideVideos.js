@@ -2,7 +2,7 @@ import "./SideVideos.scss";
 import { Link } from "react-router-dom";
 
 
-export default function SideVideos({videos, videoId}) {
+export default function SideVideos({videos}) {
   return (
     <article className="sidevideos">
       <div className="sidevideos__wrapper">
@@ -12,7 +12,7 @@ export default function SideVideos({videos, videoId}) {
         <>
         <div key={video.id}>
         <div className="sidevideos__container">
-        <Link to={`/videos/${videoId}`}> 
+        <Link to={`/videos/${video?.id}`}> 
         <img
           src={video.image}
           alt={video.title}
