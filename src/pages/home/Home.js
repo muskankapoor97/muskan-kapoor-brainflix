@@ -68,7 +68,7 @@ console.log(params);
   }
     },
   
-   []);
+   [params.videoId]);
 
 
 // const timestamps=(oldTimestamp)=>{
@@ -81,7 +81,7 @@ console.log(params);
  
   return (
     <>
-    <Header />
+   
     <Hero videoPoster={videoDetails.image}/>
     <div className="mainPage">
       <div className="mainPage__containers-one">
