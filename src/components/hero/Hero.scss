@@ -12,7 +12,14 @@
  @include breakpoint.medium{
     .hero__poster{
         
-        height:25rem;
+        height:33rem;
+        
+    }
+ }
+ @include breakpoint.large{
+    .hero__poster{
+        
+        height: 40.2rem;
         
     }
  }

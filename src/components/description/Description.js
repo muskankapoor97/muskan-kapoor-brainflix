@@ -19,7 +19,6 @@ export default function Description({videoDetails}){
     return (
     <section className="description">
         <h2 className="description__heading">{title}</h2>
-        <hr className="hr--mobile"/>
         <div className="description__info">
         <div className="description__info-containers">
             <p className="description__channel">By {channel}</p>
@@ -37,7 +36,7 @@ export default function Description({videoDetails}){
             </div>
         </div>
         </div>
-        <hr className="hr--tablet"/>
+        
         <p className="description__paragraph">{description}</p>
 
     </section>
