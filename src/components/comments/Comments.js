@@ -31,7 +31,7 @@ export default function Comments({videoDetails}){
         <div key={comment.id}>
            
             <div className="comments__container">
-            <hr />
+            
                 <div className="comment__container">
                 <div className="comment__image-container">
 

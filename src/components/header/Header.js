@@ -8,7 +8,9 @@ export default function Header() {
         <header className="header">
             <nav className="navbar">
                 <div className="navbar__container">
+                <Link to={"/"}>
                     <img src={logo} className="navbar__logo" alt="Brainflix logo" />
+                    </Link>
                     <div className="navbar__rightContainer">
                         <div className="navbar__input-wrapper">
                         <div className="navbar__input-container">

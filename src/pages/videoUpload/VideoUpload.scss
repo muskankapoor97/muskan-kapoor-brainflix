@@ -2,6 +2,9 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/fonts" as *;
 
+.upload__heading,.upload__subheading{
+    margin: 0;
+}
 .upload{
     padding: 0 1rem;
     &__heading{
@@ -9,21 +12,23 @@
     font-family: Avenir-demi;
     font-size: 2rem;
     padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     }
 
     &__subheading{
     color: $secondary-text-color;
     font-size: 0.95rem;
     padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
         
     }
     &__thumbnail{
         background-image: url(../../assets/images/Upload-video-preview.jpg);
         background-size: cover;
         width: 100%;
-        height: 15.2rem;
-        object-fit: cover;  
+        height: 13.2rem;
+        object-fit: cover;
+        border-radius: 0.25rem; 
     }
 
     &__input{
@@ -34,7 +39,10 @@
         background-color: $secondary-background-color;
       
         &--description{
-            height: 8.5rem;
+            height: 7.5rem;
+        }
+        &--title{
+            height: 3.4rem;
         }
 
     }
@@ -47,6 +55,7 @@
             border: none;
             font-size: 1rem;
             margin-top: 1rem;
+            padding-top: 1rem;
             &--publish:hover{
                 background-color: $secondary-cta-color;
             }
@@ -54,12 +63,20 @@
             &--cancel{
             background-color:$primary-background-color;
             color:$primary-cta-color;
+            font-family: Avenir-demi;
+            margin-top: 2rem;
             }
     
     
      }
 
-
+     .upload__button::before {
+        content: url(../../assets/icons/publish.svg);
+        display: block;
+        float: left;
+        position: relative;
+        bottom: 12%;
+    }
     
 
     
@@ -67,23 +84,93 @@
 
 @include breakpoint.medium{
     .upload{
-
+        padding: 0;
+        border-top: 1px solid $divider-color;
+        &__wrapper{
+            padding: 0 3rem;
+            
+        }
         &__heading{
             border-bottom: 1px solid $divider-color;
+            font-size: 2.5rem;
+            border-top: none;
+            font-family: Avenir-bold;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+        }
+        &__subheading{
+            padding-top: 2.5rem;
         }
         &__thumbnail{
             width: 50%;
+            height: 16rem;
         }
         &__button{
-            width: 20%;
-            height: 2.6rem;
+            width: 13rem;
+            height: 3.2rem;
+            margin:0;
         &-wrapper{
             display: flex;
-            
+            border-top: 1px solid $divider-color;
+            padding-top: 2rem;
             justify-content: flex-end;
            
         }
         
     }
+    &__input--description{
+        margin-bottom: 2rem;
+        }
+    }
+}
+@include breakpoint.large{
+    .upload{
+        padding: 0 ;
+        border-top: 1px solid $divider-color;
+        &__wrapper{
+            padding: 0 10rem;
+            
+        }
+        &__heading{
+            border-bottom: 1px solid $divider-color;
+            font-size: 2.5rem;
+            border-top: none;
+            font-family: Avenir-bold;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+        }
+        &__subheading{
+            padding-top: 2.5rem;
+        }
+        &__thumbnail{
+            width: 50%;
+            height: 16rem;
+        }
+        &__button{
+            width: 13rem;
+            height: 3.2rem;
+            margin:0;
+        &-wrapper{
+            display: flex;
+            border-top: 1px solid $divider-color;
+            padding-top: 2rem;
+            justify-content: flex-end;
+           
+        }
+        
+    }
+    &__input--description{
+        margin-bottom: 2rem;
+        }
+    }
+    .upload__flex-wrapper{
+        display: flex;
+       justify-content: space-between;
+    }
+    .upload__thumbnail{
+        width: 25rem;
+    }
+    .upload__form-wrapper{
+        width: 70%;
     }
 }

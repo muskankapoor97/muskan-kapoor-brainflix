@@ -7,6 +7,7 @@
 .sidevideos{
     border-top: 1px solid $divider-color;
     padding: 0 1rem;
+    padding-bottom: 1.5rem;
     &__heading{
         color: $secondary-text-color;
         font-size: 0.95rem;
@@ -21,31 +22,57 @@
     
 }
 .sidevideo__image{
-    min-width: 8.92rem;
+    min-width: 8.4rem;
+    max-width: 8.4rem;
     height: 4.8rem;
     border-radius: 0.25rem;
     object-fit: cover;
     margin-right: 1rem;
     
 }
-.sidevideo__content-title{
-        
+
+.sidevideo__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-title{
     font-family: Avenir-demi;
+    line-height: 1.5rem;
+}
 }
 @include breakpoint.medium{
-    .sidevideos__wrapper{
-        width: 50%;
-    }
+  
+    .sidevideos{
+        padding: 0 3rem;
+        &__wrapper{
+            width: 48%;
+            font-size: 1.1rem;
+        }
+        &__container{
+        padding-top: 1.5rem; 
+        }
+        &__heading{
+        padding-top: 2.5rem;
+        padding-bottom: 0.7rem;
+        }
+}
     .sidevideo__content-title{
         margin-bottom: 1rem;
+    }
+    .sidevideo__image{
+    margin-right: 2rem;
     }
 }
 @include breakpoint.large{
     .sidevideos{
         border-top: none;
         border-left: 1px solid $divider-color;
+        padding-top: 2.5rem;
     &__wrapper{
         width: 90%;
     }
+    &__container{
+        padding-top: 2rem; 
+        }
 }
 }
