@@ -24,11 +24,13 @@
         width: 2.8rem;
         max-height: 2.8rem;
         object-fit: contain;
+        margin-top: 1rem;
     }
     &__form{
         width: 82%;
 
         &-heading{
+            font-size: 1rem;
             color: $secondary-text-color;
            
         }
@@ -50,6 +52,7 @@
             border: none;
             font-size: 1rem;
             margin-top: 1rem;
+            padding-top: 1rem;
         }
         
 
@@ -62,7 +65,7 @@
         display: block;
         float: left;
         position: relative;
-        top: 5%;
+        bottom: 12%;
     }
 
     .comment{
@@ -71,6 +74,7 @@
         &__container{
             display: flex;
             justify-content: space-between;
+            border-top: 1px solid $divider-color;
         }
 
         &__image-container{
@@ -95,7 +99,10 @@
 
     @include breakpoint.medium{
         .videoComments{
-            padding: 0 2.25rem;
+            padding: 0 3rem;
+            &__user{
+                padding-bottom: 2rem;
+            }
             &__total{
                 font-family: Avenir-bold;
             }
@@ -104,12 +111,15 @@
                 justify-content: space-between;
             }
             &__form-button{
-                width: 44%;
-                height: 2.6rem;
+                width: 35%;
+                height: 3.4rem;
                 margin: 0;
+                &:hover{
+                    background-color: $secondary-cta-color;
+                }
             }
             &__form-input{
-                height: 2.6rem;
+                height: 3.4rem;
                 margin-right: 4%;
             }
             &__user-image{
@@ -124,11 +134,23 @@
     }
     .comment{
         width: 90%;
+        &__container{
+            padding: 1rem 0;
+        }
+        &__content{
+            line-height: 1.5rem;
+            font-size: 1.09rem;
+        }
+
     }
 }
 @include breakpoint.large{
     .videoComments{
         padding: 0;
+        padding-left: 10rem;
+        &__user{
+            padding-right:2.25rem ;
+        }
     }
     .comment{
        padding: 0 2.25rem;

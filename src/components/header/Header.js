@@ -1,5 +1,6 @@
 import "./Header.scss";
 import logo from"../../assets/logos/BrainFlix-logo.svg";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -7,7 +8,9 @@ export default function Header() {
         <header className="header">
             <nav className="navbar">
                 <div className="navbar__container">
+                <Link to={"/"}>
                     <img src={logo} className="navbar__logo" alt="Brainflix logo" />
+                    </Link>
                     <div className="navbar__rightContainer">
                         <div className="navbar__input-wrapper">
                         <div className="navbar__input-container">
@@ -17,8 +20,9 @@ export default function Header() {
                         <div className="navbar__image--mobile"></div>
                         </div>
                         <div className="navbar__button-container">
+                        <Link to={"/upload"}> 
                         <button className="navbar__button">UPLOAD</button>
-                        
+                        </Link>
                         </div>
                         <div className="navbar__image--tablet"></div>
                         

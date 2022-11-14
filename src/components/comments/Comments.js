@@ -1,12 +1,19 @@
 import "./Comments.scss";
 import addComment from "../../assets/icons/add_comment.svg";
 
-export default function Comments({videoComments,timestamps}){
-    
+export default function Comments({videoDetails}){
+    const videoComments=videoDetails["comments"];
+   
+    const timestamps=(oldTimestamp)=>{
+        let newTimeStamp=new Date(oldTimestamp);
+        let newDate=newTimeStamp.getUTCMonth()+1+"/"+ newTimeStamp.getUTCDate()+"/"+ newTimeStamp.getUTCFullYear();
+        return newDate;
+          }
+         
     
     return(
         <section className="videoComments">
-            <p className="videoComments__total"> {videoComments.length} Comments</p>
+            <p className="videoComments__total"> {videoComments?.length} Comments</p>
             <div className="videoComments__user">
                 <div className="videoComments__user-image"></div>
                 <div className="videoComments__form">
@@ -19,12 +26,12 @@ export default function Comments({videoComments,timestamps}){
                 </div>
 
             </div>
-        {videoComments.map((comment)=>(
+        {videoComments?.map((comment)=>(
             
         <div key={comment.id}>
            
             <div className="comments__container">
-            <hr />
+            
                 <div className="comment__container">
                 <div className="comment__image-container">
 
