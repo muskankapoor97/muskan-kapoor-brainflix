@@ -47,6 +47,9 @@
             border: none;
             font-size: 1rem;
             margin-top: 1rem;
+            &--publish:hover{
+                background-color: $secondary-cta-color;
+            }
     
             &--cancel{
             background-color:$primary-background-color;

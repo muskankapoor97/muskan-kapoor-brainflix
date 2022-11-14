@@ -107,6 +107,9 @@
                 width: 44%;
                 height: 2.6rem;
                 margin: 0;
+                &:hover{
+                    background-color: $secondary-cta-color;
+                }
             }
             &__form-input{
                 height: 2.6rem;
