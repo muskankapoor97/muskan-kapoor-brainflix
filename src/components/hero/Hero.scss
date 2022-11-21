@@ -2,24 +2,32 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/fonts" as *;
 
+@include breakpoint.small{
 .hero__poster{
      width: 100vw;
      height: 15.2rem;
      object-fit: cover;
      
-    
+}
  }
+
  @include breakpoint.medium{
     .hero__poster{
-        
-        height:33rem;
-        
+        width: 100vw;
+         height:33rem;
+         aspect-ratio: 16/9;
+        &-wrapper{
+        background-color: black;
+        }
     }
  }
  @include breakpoint.large{
     .hero__poster{
-        
+        width: 100vw;
         height: 40.2rem;
-        
+        aspect-ratio: 16/9;
+        &-wrapper{
+            background-color: black;
+            }
     }
  }

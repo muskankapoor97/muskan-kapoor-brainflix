@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function VideoUpload (){
-    const navigate=useNavigate();
+  const navigate=useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
         const newVideo = {
@@ -19,6 +19,7 @@ export default function VideoUpload (){
           });
           navigate("/")
       };
+     
     return (
     <section className="upload">
         <div className="upload__wrapper">
@@ -29,8 +30,11 @@ export default function VideoUpload (){
         <h2 className="upload__subheading">VIDEO THUMBNAIL</h2>
         <div className="upload__thumbnail"></div>
         </div>
+        
        <div className="upload__form-wrapper">
+       
         <div className="upload__title-wrapper">
+        
         <label htmlFor="text" className="upload__subheading">TITLE YOUR VIDEO</label>
         <input type="text" id="text" name="title" placeholder="Add a title to your video" className="upload__input upload__input--title" /> 
         </div>
@@ -40,18 +44,22 @@ export default function VideoUpload (){
         </div>
         </div>
         </div>
-        {/* <div className="upload__button-wrapper"> */}
-        
-        <button type="submit" className="upload__button upload__button--publish">PUBLISH</button>
-       </form>
+        <div className="upload__button-wrapper">
         <Link to={"/"}>
-        <button type="submit" className="upload__button upload__button--cancel">CANCEL</button>
+        <button className="upload__button upload__button--cancel upload__button--tablet">CANCEL</button>
+        </Link>
+        {/* <Link to={"/"}> */}
+        <button type="submit" className="upload__button upload__button--publish">PUBLISH</button>
+        {/* </Link> */}
+        
+        <Link to={"/"}>
+        <button className="upload__button upload__button--cancel upload__button--mobile">CANCEL</button>
         </Link>
         
         </div>
-        
-        
-        {/* </div> */}
+        </form>
+       
+        </div>
         </section>
     );
 }
