@@ -9,15 +9,15 @@ export default function SideVideos({videos}) {
       <h2 className="sidevideos__heading">NEXT VIDEOS</h2>
       
       {videos.map((video) => (
-        <>
-        <div key={video.id}>
+        
+        <div key={video?.id}>
         <div className="sidevideos__container">
         <Link to={`/videos/${video?.id}`}> 
         <img
           src={video.image}
           alt={video.title}
           className="sidevideo__image"
-          key={video.id}
+          
            />
           </Link>
           <div className="sidevideo__content">
@@ -25,7 +25,7 @@ export default function SideVideos({videos}) {
             <p className="sidevideo__content-channel">{video.channel}</p>
           </div>
         </div></div>
-          </>
+          
           ))}
           </div>
       

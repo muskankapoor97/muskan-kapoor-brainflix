@@ -31,7 +31,7 @@ a{
     font-size: 0.95rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
-        
+    font-family: Avenir-demi;
     }
     &__thumbnail{
         background-image: url(../../assets/images/Upload-video-preview.jpg);
@@ -56,6 +56,10 @@ a{
             height: 3.4rem;
         }
 
+    }
+    &__input::placeholder{
+        font-family: Avenir-regular;
+        color: $primary-text-color;
     }
     &__button{
         width: 100%;
@@ -114,6 +118,7 @@ a{
         }
         &__subheading{
             padding-top: 2.5rem;
+            font-family: Avenir-demi;
         }
         &__thumbnail{
             width: 30rem;
@@ -170,6 +175,7 @@ a{
         }
         &__subheading{
             padding-top: 2rem;
+            font-family: Avenir-demi;
         }
         &__thumbnail{
             width: 50%;
@@ -196,23 +202,25 @@ a{
     &__input--description{
         margin-bottom: 2rem;
         }
+        &__flex-wrapper{
+            display: flex;
+           justify-content: space-between;
+        }
+        &__thumbnail{
+            width: 24rem;
+        }
+        &__form-wrapper{
+            width: 57%;
+        }
+        &__title-wrapper{
+            padding-top: 2rem;
+        
+        }
+        &__description-wrapper{
+            padding-top: 2rem;
+        
+        }
     }
-    .upload__flex-wrapper{
-        display: flex;
-       justify-content: space-between;
-    }
-    .upload__thumbnail{
-        width: 24rem;
-    }
-    .upload__form-wrapper{
-        width: 57%;
-    }
-    .upload__title-wrapper{
-        padding-top: 2rem;
     
-    }
-    .upload__description-wrapper{
-        padding-top: 2rem;
     
-    }
 }

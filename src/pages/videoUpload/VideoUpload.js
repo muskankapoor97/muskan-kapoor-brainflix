@@ -27,7 +27,7 @@ export default function VideoUpload (){
         <form onSubmit={handleSubmit}>
         <div className="upload__flex-wrapper">
         <div className="upload__thumbnail-wrapper">
-        <h2 className="upload__subheading">VIDEO THUMBNAIL</h2>
+        <p className="upload__subheading">VIDEO THUMBNAIL</p>
         <div className="upload__thumbnail"></div>
         </div>
         
