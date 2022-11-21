@@ -11,11 +11,11 @@ export default function VideoUpload (){
           title:event.target.title.value,
           description:event.target.description.value,
         };
-        console.log(event.target.title.value);
+       
        axios
           .post(`http://localhost:8080/videos`, newVideo)
           .then((response) => {
-           console.log(response);
+           console.log(" ");
           });
           navigate("/")
       };

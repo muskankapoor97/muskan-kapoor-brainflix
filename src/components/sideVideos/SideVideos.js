@@ -8,7 +8,7 @@ export default function SideVideos({videos}) {
       <div className="sidevideos__wrapper">
       <h2 className="sidevideos__heading">NEXT VIDEOS</h2>
       
-      {videos.map((video) => (
+      {videos&&videos.map((video) => (
         
         <div key={video?.id}>
         <div className="sidevideos__container">
