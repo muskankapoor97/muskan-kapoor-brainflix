@@ -5,7 +5,11 @@
 .upload__heading,.upload__subheading{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 .upload{
+    font-family: Avenir-regular;
     padding: 0 1rem;
     &__heading{
     border-top: 1px solid $divider-color;
@@ -14,13 +18,20 @@
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
     }
-
+    &__title-wrapper{
+        padding-top: 2rem;
+    
+    }
+    &__description-wrapper{
+        padding-top: 2rem;
+    
+    }
     &__subheading{
     color: $secondary-text-color;
     font-size: 0.95rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
-        
+    font-family: Avenir-demi;
     }
     &__thumbnail{
         background-image: url(../../assets/images/Upload-video-preview.jpg);
@@ -46,6 +57,10 @@
         }
 
     }
+    &__input::placeholder{
+        font-family: Avenir-regular;
+        color: $primary-text-color;
+    }
     &__button{
         width: 100%;
             height: 3.1rem;
@@ -65,6 +80,9 @@
             color:$primary-cta-color;
             font-family: Avenir-demi;
             margin-top: 2rem;
+            }
+            &--tablet{
+                display: none;
             }
     
     
@@ -100,9 +118,10 @@
         }
         &__subheading{
             padding-top: 2.5rem;
+            font-family: Avenir-demi;
         }
         &__thumbnail{
-            width: 50%;
+            width: 30rem;
             height: 16rem;
         }
         &__button{
@@ -114,12 +133,27 @@
             border-top: 1px solid $divider-color;
             padding-top: 2rem;
             justify-content: flex-end;
+            margin-bottom: 2rem;
            
         }
+            &--mobile{
+                display: none;
+            }
+            &--tablet{
+                display: block;
+            }
         
     }
     &__input--description{
         margin-bottom: 2rem;
+        }
+        &__title-wrapper{
+            padding-top: 2rem;
+        
+        }
+        &__description-wrapper{
+            padding-top: 2rem;
+        
         }
     }
 }
@@ -140,11 +174,12 @@
             padding-bottom: 1.5rem;
         }
         &__subheading{
-            padding-top: 2.5rem;
+            padding-top: 2rem;
+            font-family: Avenir-demi;
         }
         &__thumbnail{
             width: 50%;
-            height: 16rem;
+            height: 13rem;
         }
         &__button{
             width: 13rem;
@@ -157,20 +192,35 @@
             justify-content: flex-end;
            
         }
-        
+            &--mobile{
+                display: none;
+            }
+            &--tablet{
+                display: block;
+            }
     }
     &__input--description{
         margin-bottom: 2rem;
         }
+        &__flex-wrapper{
+            display: flex;
+           justify-content: space-between;
+        }
+        &__thumbnail{
+            width: 24rem;
+        }
+        &__form-wrapper{
+            width: 57%;
+        }
+        &__title-wrapper{
+            padding-top: 2rem;
+        
+        }
+        &__description-wrapper{
+            padding-top: 2rem;
+        
+        }
     }
-    .upload__flex-wrapper{
-        display: flex;
-       justify-content: space-between;
-    }
-    .upload__thumbnail{
-        width: 25rem;
-    }
-    .upload__form-wrapper{
-        width: 70%;
-    }
+    
+    
 }

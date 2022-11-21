@@ -26,7 +26,7 @@ export default function Comments({videoDetails}){
                 </div>
 
             </div>
-        {videoComments?.map((comment)=>(
+        {videoComments&&videoComments?.map((comment)=>(
             
         <div key={comment.id}>
            

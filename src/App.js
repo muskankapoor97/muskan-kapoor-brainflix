@@ -1,9 +1,8 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import VideoUpload from "./pages/videoUpload/VideoUpload";
 import Header from "./components/header/Header";
-import Publish from "./components/publish/Publish";
+
 
 
 function App (){
@@ -15,7 +14,6 @@ return(
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="upload" element={<VideoUpload />} />
-      <Route path="publish" element={<Publish />} />
       <Route path="videos/:videoId" element={<Home />} />
      </Routes>
      </BrowserRouter>

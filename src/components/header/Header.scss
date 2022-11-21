@@ -18,9 +18,12 @@
     &__input{
         width: 100%;
         height:3rem;
+        padding: 1.3rem;
         border:2px solid $divider-color;
         border-radius: 0.4rem;
-        position: relative;
+        background: url(../../assets/icons/search.svg);
+        background-repeat: no-repeat;
+        background-position: left;
         
     }
     
@@ -149,17 +152,12 @@
             background:url(../../assets/images/Mohan-muruge.jpg);
             background-size: cover;
             border-radius: 50%;
-            width: 4rem;
-            max-height: 4rem;
+            width: 3rem;
+            max-height: 3rem;
             object-fit: contain;
             margin:1rem 0;
         }
-        &__button{
-            height:3.6rem;
-        }
-        &__input{
-            height:3.6rem;
-        }
+        
         &__button-container{
             width: 25%;
             

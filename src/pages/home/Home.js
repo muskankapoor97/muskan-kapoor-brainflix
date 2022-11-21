@@ -34,9 +34,8 @@ const getVideos = (data) => {
     const fetchVideos= async () => {
       try {
         const {data} = await axios.get
-        (`https://project-2-api.herokuapp.com/videos?api_key=d89a5cd6-173c-4e27-9611-45546c24985f`);
+        (`http://localhost:8080/videos`);
         setVideos(getVideos(data));
-        console.log(getVideos(data));
       } catch (error) {
         console.log("Error", error);
       }
@@ -55,7 +54,7 @@ const getVideos = (data) => {
     const fetchVideoDetails= async () => {
       try {
         const response = await axios.get
-        (`https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=d89a5cd6-173c-4e27-9611-45546c24985f`);
+        (`http://localhost:8080/videos/${params.videoId}`);
         setVideoDetails(response.data);
       } catch (error) {
         console.log("Error", error);
@@ -67,7 +66,7 @@ const getVideos = (data) => {
     const fetchVideoDetails= async () => {
       try {
         const response = await axios.get
-        (`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=d89a5cd6-173c-4e27-9611-45546c24985f`);
+        (`http://localhost:8080/videos/${videoId}`);
         setVideoDetails(response.data);
       } catch (error) {
         console.log("Error", error);
@@ -78,9 +77,6 @@ const getVideos = (data) => {
     },
   
    [params.videoId]);
-
-
-
  
  
  
