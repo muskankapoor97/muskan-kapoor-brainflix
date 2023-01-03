@@ -1,17 +1,16 @@
 import "./Home.scss"
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Comments from "../../components/comments/Comments";
-import Description from "../../components/description/Description";
-import Hero from "../../components/hero/Hero";
-import SideVideos from "../../components/sideVideos/SideVideos";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import viewsIcon from "../../assets/icons/views.svg";
+import likesIcon from "../../assets/icons/likes.svg";
+
+
 
 
 
 function Home() {
-
-const [videoId,setVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");  
+  const [videoId,setVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");  
 const [videos, setVideos] = useState([]);
 const [videoDetails, setVideoDetails] = useState({});
 
@@ -78,22 +77,56 @@ const getVideos = (data) => {
   
    [params.videoId]);
  
- 
- 
-  return (
-    <>
-   
-    <Hero videoPoster={videoDetails.image}/>
-    <div className="mainPage">
-      <div className="mainPage__containers-one">
-    <Description videoDetails={videoDetails} /> 
-     <Comments videoDetails={videoDetails} />
-     </div>
-     <div className="mainPage__containers-two">
-    <SideVideos videos={videos} videoId={videoId}/>
-    </div>
-    </div>
-    </>
+   const{
+    id,
+title,
+channel,
+description,
+views,
+likes,
+timestamp,
+...rest
+
+}=videoDetails;
+let newTimeStamp=new Date(videoDetails.timestamp);
+    let newDate=newTimeStamp.getUTCMonth()+1+"/"+ newTimeStamp.getUTCDate()+"/"+ newTimeStamp.getUTCFullYear();
+return(
+    <section className="homeVideos">
+      {videos&&videos.map((video) => (
+        
+        <div key={video?.id}>
+      <div className="homeVideos__container">
+      <Link to={`/videos/${video?.id}`}> 
+        <div className="homeVideo">
+          
+          <img
+          src={video.image}
+          alt={video.title}
+          className="homeVideo__video"
+          
+           />
+          <div className="homeVideo__content">
+          <p className="homeVideo__content-title">{video.title}</p>
+            <p className="homeVideo__content-channel">By {video.channel}</p>
+            <div className="homeVideo__content-description">
+            <p className="description__date">{newDate}</p>
+            <div className="description__views">
+                <img src={viewsIcon} alt="views-icon" className="description__views-icon" />
+                <span className="description__views-number">{views}</span>
+            </div>
+            <div className="description__likes">
+            <img src={likesIcon} alt="likes-icon" className="description__likes-icon" />
+            <span className="description__likes-number">{likes}</span>
+            </div>
+            </div>
+          </div>
+        </div>
+        </Link>
+      </div>
+      </div>
+          
+          ))}
+    </section>
  );
 }
 
